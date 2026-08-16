@@ -1,0 +1,15 @@
+.tab-count { background: rgba(29,78,216,.12); color: var(--primary); font-size: .7rem; padding: 1px 7px; border-radius: 999px; margin-left: 6px; }
+.tab-btn.active .tab-count { background: var(--primary-light); }
+
+.req-list { display: grid; gap: 14px; }
+.req-card { padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.req-card h4 { margin: 0 0 3px; font-size: .95rem; }
+.req-card-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.req-actions { display: flex; gap: 8px; }
+
+@media (max-width: 700px) {
+  .req-card { flex-direction: column; align-items: flex-start; }
+  .req-card-meta { align-items: flex-start; flex-direction: row; }
+  .req-actions { width: 100%; }
+  .req-actions .btn { flex: 1; }
+}

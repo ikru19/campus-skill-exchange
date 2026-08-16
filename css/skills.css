@@ -1,0 +1,26 @@
+.skill-manage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.manage-card { padding: 22px; }
+.manage-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+.manage-card h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.manage-card p { font-size: .85rem; margin-bottom: 0; }
+.manage-card-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
+
+@media (max-width: 1080px) { .skill-manage-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .skill-manage-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Learning System: dynamic resource rows ---------- */
+.resource-row { display: grid; grid-template-columns: 1.3fr 1fr 1.3fr auto; gap: 8px; margin-bottom: 10px; }
+.resource-row .input { margin: 0; }
+.resource-row .remove-resource-btn { padding: 0 12px; }
+@media (max-width: 620px) { .resource-row { grid-template-columns: 1fr; } }
+
+.resource-card-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin-top: 8px; }
+.resource-card { display: block; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; text-decoration: none; color: inherit; transition: transform .12s ease; }
+.resource-card:hover { transform: translateY(-2px); }
+.resource-card .res-type { display: block; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; color: var(--primary); margin-bottom: 4px; }
+.resource-card .res-title { font-size: .85rem; font-weight: 600; }
+
+.details-panel { background: var(--bg); border: 1px solid var(--border); border-left: 4px solid var(--success); border-radius: 10px; padding: 16px 18px; margin-top: 14px; }
+.details-panel h4 { margin: 0 0 10px; font-size: .95rem; }
+.details-panel .detail-row { font-size: .82rem; margin-bottom: 6px; }
+.locked-note { font-size: .78rem; color: var(--text-muted); font-style: italic; margin-top: 6px; }

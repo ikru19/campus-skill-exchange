@@ -1,0 +1,18 @@
+.browse-toolbar { display: flex; gap: 14px; padding: 16px; margin-bottom: 20px; align-items: center; flex-wrap: wrap; }
+.browse-search { flex: 1; min-width: 220px; position: relative; display: flex; align-items: center; }
+.browse-search svg { position: absolute; left: 14px; opacity: .5; }
+.browse-search input { padding-left: 40px; }
+.browse-filter { max-width: 190px; }
+
+.browse-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.browse-card { padding: 22px; display: flex; flex-direction: column; }
+.browse-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.browse-card h3 { font-size: 1rem; margin-bottom: 6px; }
+.browse-card p { font-size: .84rem; margin-bottom: 0; flex: 1; }
+.browse-card-teacher { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.browse-card-teacher .row-user { flex: 1; min-width: 0; }
+.browse-card-teacher strong { font-size: .83rem; display: block; }
+.browse-card-teacher .level-dots { margin-top: 5px; }
+
+@media (max-width: 1080px) { .browse-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .browse-grid { grid-template-columns: 1fr; } .browse-filter { max-width: none; flex: 1; } }
