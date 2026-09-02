@@ -1,12 +1,5 @@
-/* =========================================================
-   api.js — shared fetch helper + auth/session storage.
-   New file: every other js/*.js file now calls apiRequest()
-   here instead of touching a demo array or localStorage data.
-   ========================================================= */
+const API_URL = 'https://campus-skill-exchange-backend.onrender.com/api';
 
-const API_URL = 'http://localhost:5000/api';
-
-/* ---------- Session storage ---------- */
 function saveSession(token, user) {
   localStorage.setItem('cse_token', token);
   localStorage.setItem('cse_user', JSON.stringify(user));
@@ -26,9 +19,6 @@ function requireLogin() {
   if (!getToken()) window.location.href = 'login.html';
 }
 
-/* ---------- Fetch wrapper ----------
-   Attaches the JWT automatically, parses JSON, and throws a
-   plain Error with the backend's message on failure. */
 async function apiRequest(path, { method = 'GET', body, auth = false } = {}) {
   const headers = { 'Content-Type': 'application/json' };
   if (auth) {
