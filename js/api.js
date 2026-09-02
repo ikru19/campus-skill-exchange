@@ -1,4 +1,4 @@
-const API_URL = 'https://campus-skill-exchange-backend.onrender.com/api';
+const API_URL = 'https://campus-skill-exchange-2.onrender.com/api';
 
 function saveSession(token, user) {
   localStorage.setItem('cse_token', token);
